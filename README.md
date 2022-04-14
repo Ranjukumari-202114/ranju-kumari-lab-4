@@ -1,23 +1,31 @@
 # ranju-kumari-lab-4
 
-#include<iostream>
-#include<conio.h>
+#include <iostream>
+#include<math.h>
 using namespace std;
-void multiplication(int,int);            //function declaration with two argument
-void multiplication(int,int,int);       //function declaration with three arguments
+class Power{
+  public:
+      double power(double x,int y){
+           int i,ans=1;
+          for( i=0;i<y;i++){
+              ans=ans*x; 
+          }
+          return ans;
+      }
+      double power(double x)
+      {
+          int y = 2;
+          double a;
+          a = pow(x,y);
+          return a;
+      }
+};
+
 int main()
 {
-    multiplication(23,14);           //taking input for one two arguments function
-    multiplication(34,12,13);         //taking input for one three arguments function
+    int result = 0;
+    Power pow;
+    result = pow.power(8,6);
+    cout<<"the  result is:"<<result;
     return 0;
-    getchar();
-}
-//driver code:
-void multiplication(int x, int y)
-{
-cout<<"the multiplication of x*y= "<<(x*y)<<endl;
-}
-void multiplication(int x, int y, int z)
-{
-cout<<"the multiplication of x*y*z= "<<(x*y*z)<<endl;
 }
